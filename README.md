@@ -9,7 +9,7 @@ The **Product Logs** is a Magento 1.x extension to save the user information, da
 * Magento Community Edition 1.x
 * PHP 5.2.8+
 
-## Installation
+## Installation & Usage
 
 * You can install the extension by just cloning the project on you local computer or download a zip version of the product.
 * Now copy the app folder inside the project to your root magento installation.
