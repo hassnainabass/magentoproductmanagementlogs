@@ -12,26 +12,31 @@ class Hassnain_ProductLogs_Block_Adminhtml_Productlogs_Edit_Tab_Form extends Mag
 						$fieldset->addField("user_name", "text", array(
 						"label" => Mage::helper("productlogs")->__("User Name"),
 						"name" => "user_name",
+						"disabled" => "disabled",
 						));
 					
 						$fieldset->addField("product_sku", "text", array(
 						"label" => Mage::helper("productlogs")->__("Product SKU"),
 						"name" => "product_sku",
+						"disabled" => "disabled",
 						));
 					
 						$fieldset->addField("product_name", "text", array(
 						"label" => Mage::helper("productlogs")->__("Product Name"),
 						"name" => "product_name",
+						"disabled" => "disabled",
 						));
 					
 						$fieldset->addField("last_data", "textarea", array(
 						"label" => Mage::helper("productlogs")->__("Last Data"),
 						"name" => "last_data",
+						"disabled" => "disabled",
 						));
 					
 						$fieldset->addField("new_data", "textarea", array(
 						"label" => Mage::helper("productlogs")->__("New Data"),
 						"name" => "new_data",
+						"disabled" => "disabled",
 						));
 					
 						$dateFormatIso = Mage::app()->getLocale()->getDateTimeFormat(
@@ -41,6 +46,7 @@ class Hassnain_ProductLogs_Block_Adminhtml_Productlogs_Edit_Tab_Form extends Mag
 						$fieldset->addField('created_at', 'date', array(
 						'label'        => Mage::helper('productlogs')->__('Created At'),
 						'name'         => 'created_at',
+						"disabled" => "disabled",
 						'time' => true,
 						'image'        => $this->getSkinUrl('images/grid-cal.gif'),
 						'format'       => $dateFormatIso
