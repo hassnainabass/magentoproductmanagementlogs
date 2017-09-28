@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Hassnain_ProductLogs>
+      <version>0.1.0</version>
+    </Hassnain_ProductLogs>
+  </modules>
+  <global>
+    <helpers>
+      <productlogs>
+        <class>Hassnain_ProductLogs_Helper</class>
+      </productlogs>
+    </helpers>
+	<blocks>
+	  <productlogs>
+		<class>Hassnain_ProductLogs_Block</class>
+	  </productlogs>
+	</blocks>
+	<models>
+	  <productlogs>
+		<class>Hassnain_ProductLogs_Model</class>
+		<resourceModel>productlogs_mysql4</resourceModel>
+	  </productlogs>
+	  <productlogs_mysql4>
+		<class>Hassnain_ProductLogs_Model_Mysql4</class>
+		<entities>		  
+			  <productlogs>
+				<table>product_logs</table>
+			  </productlogs>
+        </entities>
+	  </productlogs_mysql4>
+	</models>
+	<resources>
+	  <productlogs_setup>
+		<setup>
+		  <module>Hassnain_ProductLogs</module>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </productlogs_setup>
+	  <productlogs_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </productlogs_write>
+	  <productlogs_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </productlogs_read>
+	</resources>
+    <events>
+	  <catalog_product_save_before> <!-- identifier of the event we want to catch -->
+        <observers>
+          <catalog_product_save_before_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>productlogs/observer</class> <!-- observers class alias -->
+            <method>beforeSave</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </catalog_product_save_before_handler>
+        </observers>
+      </catalog_product_save_before>
+    </events>
+  </global>
+  <admin>
+	<routers>
+	  <productlogs>
+	    <use>admin</use>
+		<args>
+		  <module>Hassnain_ProductLogs</module>
+		  <frontName>admin_productlogs</frontName>
+		</args>
+	  </productlogs>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+	  <productlogs module="productlogs">
+		<title>ProductLogs</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <productlogs module="productlogs">
+		    <title>Manage Productlogs</title>
+			<sort_order>0</sort_order>
+			<action>admin_productlogs/adminhtml_productlogs</action>
+		  </productlogs>
+		</children>
+	  </productlogs>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<productlogs translate="title" module="productlogs">
+			  <title>ProductLogs</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <productlogs translate="title">
+			<title>Manage Productlogs</title>
+			<sort_order>0</sort_order>
+		  </productlogs>
+			  </children>
+			</productlogs>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<productlogs>
+		  <file>productlogs.xml</file>
+		</productlogs>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 
