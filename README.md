@@ -11,9 +11,9 @@ The **Product Logs** is a Magento 1.x extension to save the user information, da
 
 ## Installation
 
-*You can install the extension by just cloning the project on you local computer or download a zip version of the product.
-*Now copy the app folder inside the project to your root magento installation.
-*Now in magento admin panel go to System > Cache Management and clear all cache for magento.
+* You can install the extension by just cloning the project on you local computer or download a zip version of the product.
+* Now copy the app folder inside the project to your root magento installation.
+* Now in magento admin panel go to System > Cache Management and clear all cache for magento.
 * Now you will see the a new item in the top navbar of admin panel labelled as 'ProductLogs'.
 * Go to ProductLogs > Manage Productlogs, You will see all the entries there.
 * To test if it is working, Please try to edit a product in Catalog > Manage Products.
