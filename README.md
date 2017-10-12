@@ -24,7 +24,7 @@ Developed by [Hassnain Abass](https://www.linkedin.com/in/hussnain-abass-b041b57
 
 ## Contributing
 
-This repository follows the [CakePhp Plugin Standards](https://book.cakephp.org/3.0/en/plugins.html). If you'd like to contribute new features, enhancements or bug fixes to the plugin, please feel free to pull or report/open issues.
+This repository follows the [Magento Extension Standards](http://devdocs.magento.com/guides/m1x/ce19-ee114-home.html). If you'd like to contribute new features, enhancements or bug fixes to the plugin, please feel free to pull or report/open issues.
 
 ## License
 
